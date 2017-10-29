@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:elasticsearch="http://www.pilato.fr/schema/elasticsearch"
+	xsi:schemaLocation="http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.pilato.fr/schema/elasticsearch http://www.pilato.fr/schema/elasticsearch/elasticsearch-0.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- 扫描 -->
+	<context:component-scan base-package="cn.yt.controller,cn.yt.service.impl"></context:component-scan>
+	<!-- 引入 db.properties-->
+	<context:property-placeholder location="classpath:mybatis/*.properties"/>
+
+       <!--引入elasticsearch.xml文件-->
+	<import resource="elasticsearch.xml" />
+	
+	<!-- 数据源 c3p0 -->
+	<bean id="dataSourceC3p0" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close"> 
+       <property name="driverClass" value="${driver_class}"></property>
+       <property name="jdbcUrl" value="${jdbcUrl}"></property>
+       <property name="user" value="${user}"></property>
+       <property name="password" value="${password}"></property>
+    </bean>
+    
+    <!-- 配置myBatis的相关信息 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+         <property name="dataSource" ref="dataSourceC3p0"></property>
+         <!-- 加载mybatis.cfg.xml文件 -->
+         <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"></property>
+         <!-- 自动扫描需要定义类别名的包，将包内的JAVA类的类名作为类别名 -->
+         <property name="typeAliasesPackage" value="cn.yt.po"></property>
+     </bean>
+    
+    <!-- 自动扫描所有的Mapper接口与文件 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="cn.yt.mapper"></property>
+    </bean>
+    
+      <!-- 事务的配置 -->
+	<bean id="txManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSourceC3p0" />
+	</bean>
+   <!-- 拦截器方式配置事物 -->
+    <tx:advice id="transactionAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <!-- 以如下关键字开头的方法使用事物 -->
+            <tx:method name="add*" propagation="REQUIRED" />
+            <tx:method name="save*" propagation="REQUIRED" />
+            <tx:method name="update*" propagation="REQUIRED"/>
+            <tx:method name="modify*" propagation="REQUIRED"/>
+            <tx:method name="edit*" propagation="REQUIRED"/>
+            <tx:method name="delete*" propagation="REQUIRED"/>
+            <tx:method name="remove*" propagation="REQUIRED"/>
+            <tx:method name="buyfood" propagation="REQUIRED"/>
+            <tx:method name="order" propagation="REQUIRED"/>
+            <!-- 以如下关键字开头的方法不使用事物 -->
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="find*" read-only="true" />
+            <tx:method name="load*"  read-only="true" />
+            <tx:method name="query*"  read-only="true" />
+          
+            <!-- 其他方法不使用事物 -->
+            <tx:method name="*" propagation="SUPPORTS" />
+        </tx:attributes>
+    </tx:advice>
+    
+    <!-- 切面，将事物用在哪些对象上 -->
+    <aop:config>
+        <aop:pointcut id="transactionPointcut" expression="execution(* cn.yt.service.impl.*Impl.*(..))" />
+        <aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" />
+    </aop:config>
+    
+    <!--引入elasticsearch.xml文件-->
+	<import resource="elasticsearch.xml" />
+      
+<!--         定义solr的server  
+    <bean id="httpSolrServer" class="org.apache.solr.client.solrj.impl.HttpSolrServer">  
+        <constructor-arg index="0" value="${solr.Url}"/>  
+    设置响应解析器    
+        <property name="parser">  
+            <bean class="org.apache.solr.client.solrj.impl.XMLResponseParser"/>  
+        </property>  
+        设置重试次数  
+        <property name="maxRetries" value="${solr.maxRetries}"/>  
+        建立连接的最长时间  
+        <property name="connectionTimeout" value="${solr.connectionTimeout}"/>  
+    </bean> --> 
+
+    
+</beans>

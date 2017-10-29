@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.yt.mapper.SearchKeyWordMapper">
+   
+   <resultMap id="searchKeyWordMap" type="cn.yt.po.SearchKeyWord" >
+    <result column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="TIMESTAMPP" property="timestampp" jdbcType="DATE" />
+    <result column="TRS_ID" property="trs_id" jdbcType="VARCHAR" />
+    <result column="USERID" property="userId" jdbcType="VARCHAR" />
+    <result column="ORIGINA" property="origina" jdbcType="DATE" />
+    <result column="KEYWORD" property="keyword" jdbcType="VARCHAR" />
+    <result column="RECORD_TIME" property="record_time" jdbcType="DATE" />
+    <result column="IP" property="ip" jdbcType="VARCHAR" />
+    <result column="TMP_TIME" property="tmp_time" jdbcType="DATE" />
+    
+  </resultMap>
+ 
+  <select id="listAll" resultMap="searchKeyWordMap">
+    select t.*, t.rowid from search_keyword t 
+  </select>
+
+</mapper>

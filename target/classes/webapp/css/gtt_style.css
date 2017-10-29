@@ -1,0 +1,1055 @@
+/**
+ * CSS Document * 
+ * Created by Jessie 2016/10/19.
+ */
+@media screen and (min-width: 1920px) {
+    html, .index-right {
+        /*zoom: 300;*/
+        zoom: 1.1;
+        /*zoom: 1.05;*/
+    }
+}
+
+/* ==css重置样式== */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+em {
+    font-style: normal;
+}
+
+table {
+    width: 100%;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    cellpadding: 0;
+    cellspacing: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ul,
+ol,
+li,
+dt,
+dd {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+abbr,
+acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    *font-size: 100%;
+}
+
+legend {
+    color: #000;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.font-nor {
+    font: normal 16px/36px "MicroSoft YaHei";
+}
+
+.cursor-p {
+    cursor: pointer;
+}
+
+.clearfix {
+    display: block;
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.dis-in-b {
+    display: inline-block;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt14 {
+    margin-top: 14px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.c_red {
+    color: red;
+}
+
+.c_gray {
+    color: #666666;
+}
+
+.c_black {
+    color: black;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.nav li {
+    display: inline-block;
+    float: left;
+}
+
+#content {
+    width: 100%;
+    position: relative;
+}
+
+.left {
+    display: inline-block;
+    width: 210px;
+    min-height: 720px;
+    background: #e9e9e9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+
+.left h2 {
+    height: 45px;
+    border-bottom: 1px solid #bbcbdc;
+    background: #0153a6 url("../images/index_ico01.png") no-repeat left center;
+    padding-left: 66px;
+    font: 18px/46px "MicroSoft YaHei";
+    font-weight: bold;
+    color: #fff;
+}
+
+.right {
+    margin-left: 236px;
+    text-align: center;
+}
+
+.right .logo {
+    position: fixed;
+    top: 20px;
+    left: 38%;
+    width: 444px;
+}
+
+.right .gjjs {
+    position: fixed;
+    top: 25px;
+    left: 93%;
+    font: 16px/36px 'MicroSoft YaHei';
+}
+
+.index-right {
+    display: inline-block;
+    width: 70%;
+    position: fixed;
+    left: 30%;
+    top: 220px;
+}
+
+.index-right .top-a {
+    text-align: left;
+}
+
+.index-right .top-a a {
+    display: inline-block;
+    padding: 0 1em;
+    margin: 0 .5em;
+    font: 1.5em/36px "MicroSoft YaHei";
+    color: #0153a6;
+}
+
+.index-right .top-a a:hover,
+.index-right .top-a a.cur {
+    background: #0153a6;
+    color: #fff;
+    font-weight: bold;
+}
+
+.index-right form {
+    display: block;
+    float: left;
+    width: 75%;
+    position: relative;
+}
+
+.index-right .form-wrapper {
+    height: 50px;
+    position: relative;
+}
+
+.index-right form:after {
+    content: " ";
+    display: inline-block;
+    /*display: block;*/
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    height: 50px;
+}
+
+.index-right .sr {
+    display: inline-block;
+    float: left;
+    width: 91.5%;
+    height: 50px;
+    border: 2px solid #ebebeb;
+    padding-left: 10px;
+    font: 20px/50px "MicroSoft YaHei";
+    color: #333;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    clear: right;
+    position: absolute;
+    left: 0;
+}
+
+.index-right .btn01 {
+    display: inline-block;
+    float: right;
+    width: 50px;
+    height: 50px;
+    border: none;
+    /*background: url("../images/jsjg_btn_bg.png") no-repeat;*/
+    background: url("../images/index_ico04.png") no-repeat;
+    cursor: pointer;
+    clear: right;
+}
+
+/*.index-right .btn02 {*/
+/*display: inline-block;*/
+/*float: right;*/
+/*width: 78px;*/
+/*height: 61px;*/
+/*border: none;*/
+/*background: url("../images/index_ico04_h.png") no-repeat;*/
+/*cursor: pointer;*/
+/*}*/
+
+.index-right .search-a {
+    display: inline-block;
+    /*float: right;*/
+    width: 129px;
+    height: 61px;
+    background: url("../images/index_ico05.png") no-repeat;
+    font: 18px/61px "MicroSoft YaHei";
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+}
+
+.index-right .search-a:hover {
+    background: url("../images/index_ico05_h.png") no-repeat;
+    color: #fff;
+}
+
+.index-right .b-p {
+    margin-top: 20px;
+    font: bold 14px/20px "MicroSoft YaHei";
+    color: #1f559d;
+    text-align: left;
+}
+
+.index-right .b-p a {
+    margin-right: 20px;
+    font: 14px/20px "MicroSoft YaHei";
+    color: #666;
+}
+
+.index-right .b-p a:hover {
+    color: #f00;
+}
+
+.index-right .tc-box {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 61px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background: #fff;
+    z-index: 1000;
+    text-align: left;
+    display: none;
+}
+
+.index-right .tc-box li {
+    padding-left: 5%;
+    font: 14px/44px "MicroSoft YaHei";
+    color: #333;
+    cursor: pointer;
+}
+
+.index-right .tc-box li:hover {
+    background: #ebf6ff;
+}
+
+.index-right .tc-box li em {
+    color: #f00;
+}
+
+.index-ssyq {
+    display: inline-block;
+    width: 50px;
+    height: 60px;
+    background: url("../images/index_ssyq.png") no-repeat;
+    cursor: pointer;
+    position: fixed;
+    right: 50px;
+    bottom: 10px;
+}
+
+.jsjg-right {
+    padding: 3% 0 0 3%;
+    display: block;
+    zoom: 1;
+    text-align: left;
+}
+
+.jsjg-right:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.jsjg-right .l-box {
+    display: inline-block;
+    float: left;
+    width: 73%;
+}
+
+.jsjg-right .l-box .top-a {
+    text-align: left;
+}
+
+.jsjg-right .l-box .top-a a {
+    display: inline-block;
+    padding: 0 1em;
+    margin: 0 .5em;
+    font: 1.5em/36px "MicroSoft YaHei";
+    color: #0153a6;
+}
+
+.jsjg-right .l-box .top-a a:hover,
+.jsjg-right .l-box .top-a a.cur {
+    background: #0153a6;
+    color: #fff;
+    font-weight: bold;
+}
+
+.jsjg-right .l-box .form-box {
+    margin: 20px 0 15px 0;
+    display: block;
+    zoom: 1;
+    position: relative;
+    height: 61px;
+}
+
+.jsjg-right .l-box .form-box:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.jsjg-right .l-box .form-box .search-a {
+    display: inline-block;
+    width: 129px;
+    height: 61px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.jsjg-right .l-box .form-box .search-a a {
+    display: inline-block;
+    width: 129px;
+    height: 61px;
+    background: url("../images/jsjg_btn.png") no-repeat;
+    font: 18px/61px "MicroSoft YaHei";
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+}
+
+.jsjg-right .l-box .form-box .search-a a.cur {
+    background: url("../images/jsjg_btn_h.png") no-repeat;
+    color: #fff;
+}
+
+.jsjg-right .l-box .form-box .search-a a.cur i {
+    display: inline-block;
+    width: 17px;
+    height: 10px;
+    background: url("../images/jsjg_ico01.png") no-repeat;
+    position: absolute;
+    top: 63px;
+    left: 56px;
+}
+
+.jsjg-right .l-box .form-box form {
+    position: absolute;
+    margin-right: 139px;
+    height: 61px;
+    background: url("../images/jsjg_form_bg.png") repeat-x left top;
+}
+
+.jsjg-right .l-box .form-box .sr {
+    display: inline-block;
+    float: left;
+    height: 61px;
+    background: url("../images/jsjg_sr_bg.png") no-repeat left center;
+    padding-left: 10px;;
+    border: none;
+    font: 20px/61px "MicroSoft YaHei";
+    color: #333;
+    box-sizing: border-box;
+    clear: right;
+}
+
+.jsjg-right .l-box .form-box .btn {
+    display: inline-block;
+    float: right;
+    width: 78px;
+    height: 61px;
+    background: url("../images/2016gtzy-js-an.png") no-repeat;
+    /*background: url("../images/jsjg_btn_bg.png") no-repeat;*/
+    border: none;
+    cursor: pointer;
+    clear: right;
+}
+
+.jsjg-right .l-box .search-box {
+    background: #f4f4f4;
+    padding: 7px 0;
+    display: none;
+}
+
+.jsjg-right .l-box .search-box td {
+    padding: 1%;
+    text-align: left;
+}
+
+.jsjg-right .l-box .search-box td.td-tit {
+    width: 15%;
+    font: bold 14px/26px "MicroSoft YaHei";
+    color: #333;
+    text-align: right;
+}
+
+.jsjg-right .l-box .search-box td a {
+    display: inline-block;
+    margin-right: 20px;
+    width: 70px;
+    font: 14px/26px "MicroSoft YaHei";
+    color: #666;
+    text-align: center;
+}
+
+.jsjg-right .l-box .search-box td a.cur,
+.jsjg-right .l-box .search-box td a:hover {
+    color: #0153a6;
+    background: #fff;
+}
+
+.jsjg-right .l-box .search-box td .sr01 {
+    width: 95%;
+    border: none;
+    background: #fff;
+    padding-left: 10px;
+    font: 14px/26px "MicroSoft YaHei";
+    color: #333;
+    height: 30px;
+}
+
+.jsjg-right .l-box .search-box td .sr02 {
+    width: 98%;
+    border: none;
+    background: #fff;
+    padding-left: 10px;
+    font: 14px/26px "MicroSoft YaHei";
+    color: #333;
+    height: 30px;
+}
+
+.jsjg-right .l-box .search-box td .btn {
+    width: 128px;
+    height: 28px;
+    background: url("../images/jsjg_btn_bg01.png") no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.jsjg-right .l-box .px-box {
+    border-bottom: 1px solid #ebebeb;
+    margin-top: 20px;
+    display: block;
+    zoom: 1;
+    font: 14px/32px "MicroSoft YaHei";
+    color: #999;
+    padding: 0 5px;
+}
+
+.jsjg-right .l-box .px-box:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.jsjg-right .l-box .px-box em {
+    color: #f00;
+}
+
+.jsjg-right .l-box .px-box span {
+    display: inline-block;
+    float: right;
+    font: 14px/32px "MicroSoft YaHei";
+    color: #666;
+}
+
+.jsjg-right .l-box .px-box span label {
+    display: inline-block;
+    margin-left: 20px;
+    background: url("../images/jsjg_ico04.png") no-repeat right center;
+    padding-right: 14px;
+    font: 14px/32px "MicroSoft YaHei";
+    color: #666;
+    cursor: pointer;
+}
+
+.jsjg-right .l-box .px-box span label.down {
+    background: url("../images/jsjg_ico04_h.png") no-repeat right center;
+}
+
+.jsjg-right .l-box .m-box {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+.jsjg-right .l-box .m-box h2 {
+    height: 36px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.jsjg-right .l-box .m-box h2 a {
+    font: bold 16px/36px "MicroSoft YaHei";
+    color: #333;
+}
+
+.jsjg-right .l-box .m-box h2 a em {
+    color: #f00;
+}
+
+.jsjg-right .l-box .m-box dl {
+    position: relative;
+    margin-top: 10px;
+    min-height: 125px;
+}
+
+.jsjg-right .l-box .m-box dl dt {
+    display: inline-block;
+    width: 92px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.jsjg-right .l-box .m-box dl dt img {
+    width: 103px;
+    height: 96px;
+}
+
+.jsjg-right .l-box .m-box dl dd {
+    margin-left: 112px;
+}
+
+.jsjg-right .l-box .m-box dl dd td {
+    font: 14px/24px "MicroSoft YaHei";
+    color: #888;
+}
+
+.jsjg-right .l-box .m-box dl dd a {
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #d6d6d6;
+    padding: 0 10px 0 36px;
+    font: 12px/24px "MicroSoft YaHei";
+    color: #888;
+    margin-top: 10px;
+}
+
+.jsjg-right .l-box .m-box dl dd a:hover {
+    color: #fff;
+}
+
+.jsjg-right .l-box .m-box dl dd .a1 {
+    background: #fff url("../images/jsjg_js01.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a1:hover {
+    color: #fff;
+    background: #7fd1f1 url("../images/jsjg_js01_h.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a1Hover {
+    color: #fff;
+    background: #7fd1f1 url("../images/jsjg_js01_h.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a2 {
+    background: #fff url("../images/jsjg_js02.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a2:hover {
+    color: #fff;
+    background: #7fd1f1 url("../images/jsjg_js02_h.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a2Hover {
+    color: #fff;
+    background: #7fd1f1 url("../images/jsjg_js02_h.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a3 {
+    background: #fff url("../images/jsjg_js03.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a3:hover {
+    color: #fff;
+    background: #7fd1f1 url("../images/jsjg_js03_h.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a3Hover {
+    color: #fff;
+    background: #7fd1f1 url("../images/jsjg_js03_h.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a4 {
+    background: #fff url("../images/jsjg_js04.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a4:hover {
+    background: #7fd1f1 url("../images/jsjg_js04_h.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a5 {
+    background: #fff url("../images/jsjg_js05.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a5:hover {
+    background: #7fd1f1 url("../images/jsjg_js05_h.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a6 {
+    background: #fff url("../images/jsjg_js06.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a6:hover {
+    background: #7fd1f1 url("../images/jsjg_js06_h.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a7 {
+    background: #fff url("../images/jsjg_js07.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a7Hover {
+    color: #fff;
+    background: #7fd1f1 url("../images/jsjg_js07_h.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a7:hover {
+    background: #7fd1f1 url("../images/jsjg_js07_h.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a8 {
+    background: #fff url("../images/jsjg_js08.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd .a8:hover {
+    background: #7fd1f1 url("../images/jsjg_js08_h.png") no-repeat 10px center;
+}
+
+.jsjg-right .l-box .m-box dl dd table {
+    table-layout: fixed;
+}
+
+.jsjg-right .r-box {
+    display: inline-block;
+    float: right;
+    width: 25%;
+}
+
+.jsjg-right .r-box h2 {
+    height: 50px;
+    background: #1f559d;
+    text-align: center;
+}
+
+.jsjg-right .r-box h2 strong {
+    display: inline-block;
+    padding-left: 40px;
+    font: bold 20px/50px "MicroSoft YaHei";
+    color: #fff;
+}
+
+.jsjg-right .r-box h2 strong.tit01 {
+    background: url("../images/jsjg_ico02.png") no-repeat left center;
+}
+
+.jsjg-right .r-box h2 strong.tit02 {
+    background: url("../images/jsjg_ico03.png") no-repeat left center;
+}
+
+.jsjg-right .r-box h3 {
+    height: 46px;
+    background: #f4f4f4;
+    padding: 0 20px;
+    font: bold 14px/46px "MicroSoft YaHei";
+    color: #333;
+    display: block;
+    zoom: 1;
+}
+
+.jsjg-right .r-box h3:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.jsjg-right .r-box h3:hover {
+    color: #f00;
+}
+
+.jsjg-right .r-box h3 span {
+    display: inline-block;
+    float: right;
+    font: 14px/46px "MicroSoft YaHei";
+    color: #0153a6;
+}
+
+.jsjg-right .r-box .list01 {
+    padding: 0 20px;
+}
+
+.jsjg-right .r-box .list01 li {
+    height: 36px;
+    border-bottom: 1px solid #f6f6f6;
+    display: block;
+    zoom: 1;
+    text-align: right;
+    font: 12px/36px "MicroSoft YaHei";
+    color: #0153a6;
+}
+
+.jsjg-right .r-box .list01 li:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.jsjg-right .r-box .list01 li a {
+    display: block;
+    float: left;
+    text-align: left;
+    width: 75%;
+    font: 14px/36px "MicroSoft YaHei";
+    color: #333;
+}
+
+.jsjg-right .r-box .list01 li a:hover {
+    color: #f00;
+}
+
+.jsjg-right .r-box .list02 {
+    padding: 0 20px;
+}
+
+.jsjg-right .r-box .list02 li {
+    height: 36px;
+    border-bottom: 1px solid #f6f6f6;
+    display: block;
+    zoom: 1;
+}
+
+.jsjg-right .r-box .list02 li:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.jsjg-right .r-box .list02 li span {
+    display: inline-block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #c1c1c1;
+    font: 12px/20px "MicroSoft YaHei";
+    color: #fff;
+    text-align: center;
+    margin: 8px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.jsjg-right .r-box .list02 li span.top {
+    background: #f00;
+}
+
+.jsjg-right .r-box .list02 li a {
+    display: inline-block;
+    float: right;
+    text-align: left;
+    width: 80%;
+    height: 36px;
+    font: 14px/36px "MicroSoft YaHei";
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.jsjg-right .r-box .list02 li a:hover {
+    color: #f00;
+}
+
+.jsjg-right .page {
+    padding: 10px 0;
+    height: 30px;
+    font: 14px/30px Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #333;
+}
+
+.jsjg-right .page a {
+    display: inline-block;
+    padding: 0 4px;
+    margin: 2px;
+    font: 14px/30px Arial, Helvetica, sans-serif;
+    color: #333;
+    text-decoration: none;
+}
+
+.jsjg-right .page a:hover {
+    color: #f00;
+    background: none;
+}
+
+.jsjg-right .page span {
+    padding: 0 5px;
+    font: 14px/30px Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.jsjg-right .page input.tz {
+    width: 54px;
+    height: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    padding-bottom: 3px;
+    padding: 2px 0 0 0 \9;
+    cursor: pointer;
+}
+
+.search-box table tr .enum-tr span {
+    padding: 2px 15px;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.search-box table tr .enum-tr span.active {
+    background-color: #337ab7;
+    color: #fff;
+    border-color: #337ab7;
+}
+
+.ocr_span {
+    font: normal 12px/22px "MicroSoft YaHei";
+    overflow: auto;
+}
+
+.rela {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 25px;
+    line-height: 20px;
+}
+
+.rela a {
+    margin-right: 20px;
+    color: royalblue;
+}

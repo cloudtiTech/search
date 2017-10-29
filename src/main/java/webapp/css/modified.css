@@ -1,0 +1,8 @@
+.selectedfontcolor {
+    color: #0153a6;
+    font-weight: bold;
+}
+
+.cursor-default {
+    cursor: default;
+}

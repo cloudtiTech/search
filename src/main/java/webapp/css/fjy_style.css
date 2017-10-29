@@ -1,0 +1,343 @@
+/**
+ * CSS Document * 
+ * Created by Jessie 2016/10/20.
+ */
+/* ==css重置样式== */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+em {
+    font-style: normal;
+}
+
+table {
+    width: 100%;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    cellpadding: 0;
+    cellspacing: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ul,
+ol,
+li,
+dt,
+dd {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+abbr,
+acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    *font-size: 100%;
+}
+
+legend {
+    color: #000;
+}
+
+strong {
+    font-weight: bold;
+}
+
+body {
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.clearfix {
+    display: block;
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.dis-in-b {
+    display: inline-block;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt14 {
+    margin-top: 14px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav li {
+    display: inline-block;
+    float: left;
+}
+
+#header {
+    background: #0153a5;
+    padding: 25px 0;
+    text-align: center;
+}
+
+#header h1 {
+    text-align: center;
+}
+
+#header h1 a {
+    display: inline-block;
+    padding-left: 60px;
+    font: 26px/50px "MicroSoft YaHei";
+    color: #fff;
+    cursor: default;
+}
+
+#content {
+    position: relative;
+}
+
+.left {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+}
+
+.left h2 {
+    padding-left: 60px;
+    background: url("../images/fj_ico02.png") no-repeat left center;
+    background-position-x: 20px;
+    font: bold 18px/36px "MicroSoft YaHei";
+    color: #0153a5;
+}
+
+.left ul {
+    display: block;
+    height: 100%;
+    padding-left: 20px;
+    overflow-y: auto;
+}
+
+.left ul li {
+    display: block;
+    /*background: url("../images/fj_ico03.png") no-repeat left center;*/
+    /*padding-left: 14px;*/
+    height: 36px;
+    font: 14px/36px "MicroSoft YaHei";
+    text-align: right;
+}
+
+.left ul li a {
+    display: block;
+    padding-left: 20px;
+    font: 14px/36px "MicroSoft YaHei";
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-decoration: none;
+    width: 75%;
+    float: left;
+    text-align: left;
+}
+
+.left ul li a:hover {
+    text-decoration: none;
+    color: #f00;
+}
+
+.left ul li a.pdf {
+    background: url("../images/fj_ico04.png") no-repeat left center;
+}
+
+.left ul li a.w {
+    background: url("../images/fj_ico07.png") no-repeat left center;
+}
+
+.left ul li a.pic {
+    background: url("../images/fj_ico05.png") no-repeat left center;
+}
+
+.left ul li a.t {
+    background: url("../images/fj_ico06.png") no-repeat left center;
+}
+
+.left ul span:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #f00;
+}
+
+.right {
+    width: 79%;
+    text-align: center;
+    float: right;
+    border-left-style: ridge;
+}
+
+#flashContent {
+    margin-top: 20%;
+    font: 36px/20px "MicroSoft YaHei";
+}
+
+#footer {
+    background: #0153a6;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+#footer p {
+    font: 16px/20px "MicroSoft YaHei";
+    color: #fff;
+}
+
+.a-normal {
+    color: #666;
+}
+
+.a-click {
+    color: #f00;
+}
