@@ -40,7 +40,7 @@ public class TestElasticSearch {
 				            .build();
 		
 		client = new TransportClient(settings);
-		InetSocketTransportAddress intSocket = new InetSocketTransportAddress("192.168.32.128", 9300);
+		InetSocketTransportAddress intSocket = new InetSocketTransportAddress("39.108.8.147", 9300);
 		client.addTransportAddress(intSocket);
 		System.out.println("success create");
 	}
